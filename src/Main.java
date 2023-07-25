@@ -9,11 +9,14 @@ public class Main {
         String result = calc(input);
         System.out.println(result);
     }
+
     public static String calc(String input) {
-            String[] parts = input.split(" ");
-                if (parts.length != 3){
-                    System.out.println("Cтрока не является математической операцией");
-                }
+        String[] parts = input.split(" ");
+
+
+        if (parts.length != 3) {
+            System.out.println("Cтрока не является математической операцией");
+        }
 
         int a = Integer.parseInt(parts[0]);
         int b = Integer.parseInt(parts[2]);
@@ -22,8 +25,9 @@ public class Main {
         if (a <= 1 || a >= 10 || b <= 1 || b >= 10) {
             try {
                 throw new Exception();
-            }catch (Exception e) {
-                System.out.println("Числа не входят в диапазон от 1 до 10");;
+            } catch (Exception e) {
+                System.out.println("Числа не входят в диапазон от 1 до 10");
+                ;
             }
         }
         int result;
@@ -38,7 +42,7 @@ public class Main {
                 result = a * b;
                 break;
             case "/":
-                if (b == 0){
+                if (b == 0) {
                     throw new ArithmeticException("Деление на ноль недопустимо");
                 }
                 result = a / b;
