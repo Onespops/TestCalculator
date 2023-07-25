@@ -13,7 +13,6 @@ public class Main {
     public static String calc(String input) {
         String[] parts = input.split(" ");
 
-
         if (parts.length != 3) {
             System.out.println("Cтрока не является математической операцией");
         }
@@ -27,7 +26,6 @@ public class Main {
                 throw new Exception();
             } catch (Exception e) {
                 System.out.println("Числа не входят в диапазон от 1 до 10");
-                ;
             }
         }
         int result;
